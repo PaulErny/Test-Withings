@@ -98,6 +98,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         (collectionView.cellForItem(at: indexPath) as! ImageCollectionViewCell).checkmark.isHidden = true
-        selectedImages.remove(at: indexPath.item)
+        selectedImages.removeAll(where: { $0.id == images[indexPath.item].id })
+//        selectedImages.remove(at: indexPath.item)
     }
 }
