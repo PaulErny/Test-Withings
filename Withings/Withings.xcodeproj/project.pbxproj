@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAE04D672C1723F500E7FB52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D662C1723F500E7FB52 /* AppDelegate.swift */; };
+		DAE04D692C1723F500E7FB52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D682C1723F500E7FB52 /* SceneDelegate.swift */; };
+		DAE04D6B2C1723F500E7FB52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D6A2C1723F500E7FB52 /* ViewController.swift */; };
+		DAE04D6E2C1723F600E7FB52 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DAE04D6D2C1723F600E7FB52 /* Base */; };
+		DAE04D702C17240200E7FB52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE04D6F2C17240200E7FB52 /* Assets.xcassets */; };
+		DAE04D732C17240200E7FB52 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DAE04D722C17240200E7FB52 /* Base */; };
+		DAE04D7E2C17240700E7FB52 /* WithingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D7D2C17240700E7FB52 /* WithingsTests.swift */; };
+		DAE04D882C17240700E7FB52 /* WithingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D872C17240700E7FB52 /* WithingsUITests.swift */; };
+		DAE04D8A2C17240700E7FB52 /* WithingsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D892C17240700E7FB52 /* WithingsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAE04D7A2C17240600E7FB52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAE04D5B2C1723F400E7FB52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAE04D622C1723F500E7FB52;
+			remoteInfo = Withings;
+		};
+		DAE04D842C17240700E7FB52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAE04D5B2C1723F400E7FB52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAE04D622C1723F500E7FB52;
+			remoteInfo = Withings;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAE04D632C1723F500E7FB52 /* Withings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Withings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE04D662C1723F500E7FB52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAE04D682C1723F500E7FB52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DAE04D6A2C1723F500E7FB52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAE04D6D2C1723F600E7FB52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAE04D6F2C17240200E7FB52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAE04D722C17240200E7FB52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAE04D742C17240200E7FB52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAE04D792C17240600E7FB52 /* WithingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WithingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE04D7D2C17240700E7FB52 /* WithingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithingsTests.swift; sourceTree = "<group>"; };
+		DAE04D832C17240700E7FB52 /* WithingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WithingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE04D872C17240700E7FB52 /* WithingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithingsUITests.swift; sourceTree = "<group>"; };
+		DAE04D892C17240700E7FB52 /* WithingsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithingsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAE04D602C1723F500E7FB52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAE04D762C17240600E7FB52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAE04D802C17240700E7FB52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAE04D5A2C1723F400E7FB52 = {
+			isa = PBXGroup;
+			children = (
+				DAE04D652C1723F500E7FB52 /* Withings */,
+				DAE04D7C2C17240700E7FB52 /* WithingsTests */,
+				DAE04D862C17240700E7FB52 /* WithingsUITests */,
+				DAE04D642C1723F500E7FB52 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAE04D642C1723F500E7FB52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAE04D632C1723F500E7FB52 /* Withings.app */,
+				DAE04D792C17240600E7FB52 /* WithingsTests.xctest */,
+				DAE04D832C17240700E7FB52 /* WithingsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAE04D652C1723F500E7FB52 /* Withings */ = {
+			isa = PBXGroup;
+			children = (
+				DAE04D662C1723F500E7FB52 /* AppDelegate.swift */,
+				DAE04D682C1723F500E7FB52 /* SceneDelegate.swift */,
+				DAE04D6A2C1723F500E7FB52 /* ViewController.swift */,
+				DAE04D6C2C1723F600E7FB52 /* Main.storyboard */,
+				DAE04D6F2C17240200E7FB52 /* Assets.xcassets */,
+				DAE04D712C17240200E7FB52 /* LaunchScreen.storyboard */,
+				DAE04D742C17240200E7FB52 /* Info.plist */,
+			);
+			path = Withings;
+			sourceTree = "<group>";
+		};
+		DAE04D7C2C17240700E7FB52 /* WithingsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAE04D7D2C17240700E7FB52 /* WithingsTests.swift */,
+			);
+			path = WithingsTests;
+			sourceTree = "<group>";
+		};
+		DAE04D862C17240700E7FB52 /* WithingsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DAE04D872C17240700E7FB52 /* WithingsUITests.swift */,
+				DAE04D892C17240700E7FB52 /* WithingsUITestsLaunchTests.swift */,
+			);
+			path = WithingsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAE04D622C1723F500E7FB52 /* Withings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAE04D8D2C17240700E7FB52 /* Build configuration list for PBXNativeTarget "Withings" */;
+			buildPhases = (
+				DAE04D5F2C1723F500E7FB52 /* Sources */,
+				DAE04D602C1723F500E7FB52 /* Frameworks */,
+				DAE04D612C1723F500E7FB52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Withings;
+			productName = Withings;
+			productReference = DAE04D632C1723F500E7FB52 /* Withings.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAE04D782C17240600E7FB52 /* WithingsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAE04D902C17240700E7FB52 /* Build configuration list for PBXNativeTarget "WithingsTests" */;
+			buildPhases = (
+				DAE04D752C17240600E7FB52 /* Sources */,
+				DAE04D762C17240600E7FB52 /* Frameworks */,
+				DAE04D772C17240600E7FB52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAE04D7B2C17240600E7FB52 /* PBXTargetDependency */,
+			);
+			name = WithingsTests;
+			productName = WithingsTests;
+			productReference = DAE04D792C17240600E7FB52 /* WithingsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAE04D822C17240700E7FB52 /* WithingsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAE04D932C17240700E7FB52 /* Build configuration list for PBXNativeTarget "WithingsUITests" */;
+			buildPhases = (
+				DAE04D7F2C17240700E7FB52 /* Sources */,
+				DAE04D802C17240700E7FB52 /* Frameworks */,
+				DAE04D812C17240700E7FB52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAE04D852C17240700E7FB52 /* PBXTargetDependency */,
+			);
+			name = WithingsUITests;
+			productName = WithingsUITests;
+			productReference = DAE04D832C17240700E7FB52 /* WithingsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAE04D5B2C1723F400E7FB52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					DAE04D622C1723F500E7FB52 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					DAE04D782C17240600E7FB52 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = DAE04D622C1723F500E7FB52;
+					};
+					DAE04D822C17240700E7FB52 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = DAE04D622C1723F500E7FB52;
+					};
+				};
+			};
+			buildConfigurationList = DAE04D5E2C1723F400E7FB52 /* Build configuration list for PBXProject "Withings" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAE04D5A2C1723F400E7FB52;
+			productRefGroup = DAE04D642C1723F500E7FB52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAE04D622C1723F500E7FB52 /* Withings */,
+				DAE04D782C17240600E7FB52 /* WithingsTests */,
+				DAE04D822C17240700E7FB52 /* WithingsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAE04D612C1723F500E7FB52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE04D702C17240200E7FB52 /* Assets.xcassets in Resources */,
+				DAE04D732C17240200E7FB52 /* Base in Resources */,
+				DAE04D6E2C1723F600E7FB52 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAE04D772C17240600E7FB52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAE04D812C17240700E7FB52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAE04D5F2C1723F500E7FB52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE04D6B2C1723F500E7FB52 /* ViewController.swift in Sources */,
+				DAE04D672C1723F500E7FB52 /* AppDelegate.swift in Sources */,
+				DAE04D692C1723F500E7FB52 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAE04D752C17240600E7FB52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE04D7E2C17240700E7FB52 /* WithingsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAE04D7F2C17240700E7FB52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE04D8A2C17240700E7FB52 /* WithingsUITestsLaunchTests.swift in Sources */,
+				DAE04D882C17240700E7FB52 /* WithingsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAE04D7B2C17240600E7FB52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAE04D622C1723F500E7FB52 /* Withings */;
+			targetProxy = DAE04D7A2C17240600E7FB52 /* PBXContainerItemProxy */;
+		};
+		DAE04D852C17240700E7FB52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAE04D622C1723F500E7FB52 /* Withings */;
+			targetProxy = DAE04D842C17240700E7FB52 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAE04D6C2C1723F600E7FB52 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAE04D6D2C1723F600E7FB52 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAE04D712C17240200E7FB52 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAE04D722C17240200E7FB52 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAE04D8B2C17240700E7FB52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DAE04D8C2C17240700E7FB52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAE04D8E2C17240700E7FB52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CUKPDDT2TD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Withings/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PME.Withings;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAE04D8F2C17240700E7FB52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CUKPDDT2TD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Withings/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PME.Withings;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DAE04D912C17240700E7FB52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CUKPDDT2TD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PME.WithingsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Withings.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Withings";
+			};
+			name = Debug;
+		};
+		DAE04D922C17240700E7FB52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CUKPDDT2TD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PME.WithingsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Withings.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Withings";
+			};
+			name = Release;
+		};
+		DAE04D942C17240700E7FB52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CUKPDDT2TD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PME.WithingsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Withings;
+			};
+			name = Debug;
+		};
+		DAE04D952C17240700E7FB52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CUKPDDT2TD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PME.WithingsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Withings;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAE04D5E2C1723F400E7FB52 /* Build configuration list for PBXProject "Withings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAE04D8B2C17240700E7FB52 /* Debug */,
+				DAE04D8C2C17240700E7FB52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAE04D8D2C17240700E7FB52 /* Build configuration list for PBXNativeTarget "Withings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAE04D8E2C17240700E7FB52 /* Debug */,
+				DAE04D8F2C17240700E7FB52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAE04D902C17240700E7FB52 /* Build configuration list for PBXNativeTarget "WithingsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAE04D912C17240700E7FB52 /* Debug */,
+				DAE04D922C17240700E7FB52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAE04D932C17240700E7FB52 /* Build configuration list for PBXNativeTarget "WithingsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAE04D942C17240700E7FB52 /* Debug */,
+				DAE04D952C17240700E7FB52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAE04D5B2C1723F400E7FB52 /* Project object */;
+}
