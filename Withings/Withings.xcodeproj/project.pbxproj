@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DACF5A7D2C1731E700C7E6D5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A7C2C1731E700C7E6D5 /* APIManager.swift */; };
+		DACF5A802C17330200C7E6D5 /* ImagesResonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A7F2C17330200C7E6D5 /* ImagesResonse.swift */; };
+		DACF5A822C17335200C7E6D5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A812C17335200C7E6D5 /* ImageModel.swift */; };
+		DACF5A842C173E2700C7E6D5 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A832C173E2700C7E6D5 /* ImageCollectionViewCell.swift */; };
+		DACF5A882C1753B500C7E6D5 /* ImagesCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A872C1753B500C7E6D5 /* ImagesCarouselViewController.swift */; };
+		DACF5A8B2C17547800C7E6D5 /* ImagesCarouselViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A8A2C17547700C7E6D5 /* ImagesCarouselViewLayout.swift */; };
 		DAE04D672C1723F500E7FB52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D662C1723F500E7FB52 /* AppDelegate.swift */; };
 		DAE04D692C1723F500E7FB52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D682C1723F500E7FB52 /* SceneDelegate.swift */; };
 		DAE04D6B2C1723F500E7FB52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D6A2C1723F500E7FB52 /* ViewController.swift */; };
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DACF5A7C2C1731E700C7E6D5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		DACF5A7F2C17330200C7E6D5 /* ImagesResonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesResonse.swift; sourceTree = "<group>"; };
+		DACF5A812C17335200C7E6D5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		DACF5A832C173E2700C7E6D5 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		DACF5A872C1753B500C7E6D5 /* ImagesCarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCarouselViewController.swift; sourceTree = "<group>"; };
+		DACF5A8A2C17547700C7E6D5 /* ImagesCarouselViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCarouselViewLayout.swift; sourceTree = "<group>"; };
 		DAE04D632C1723F500E7FB52 /* Withings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Withings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE04D662C1723F500E7FB52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE04D682C1723F500E7FB52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +88,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DACF5A792C172A4D00C7E6D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAE04D6A2C1723F500E7FB52 /* ViewController.swift */,
+				DACF5A892C17546400C7E6D5 /* Carousel */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DACF5A7E2C1732D700C7E6D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DACF5A7F2C17330200C7E6D5 /* ImagesResonse.swift */,
+				DACF5A812C17335200C7E6D5 /* ImageModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DACF5A892C17546400C7E6D5 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				DACF5A872C1753B500C7E6D5 /* ImagesCarouselViewController.swift */,
+				DACF5A8A2C17547700C7E6D5 /* ImagesCarouselViewLayout.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
 		DAE04D5A2C1723F400E7FB52 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +140,13 @@
 			children = (
 				DAE04D662C1723F500E7FB52 /* AppDelegate.swift */,
 				DAE04D682C1723F500E7FB52 /* SceneDelegate.swift */,
-				DAE04D6A2C1723F500E7FB52 /* ViewController.swift */,
 				DAE04D6C2C1723F600E7FB52 /* Main.storyboard */,
 				DAE04D6F2C17240200E7FB52 /* Assets.xcassets */,
+				DACF5A7E2C1732D700C7E6D5 /* Models */,
+				DACF5A792C172A4D00C7E6D5 /* Views */,
 				DAE04D712C17240200E7FB52 /* LaunchScreen.storyboard */,
+				DACF5A832C173E2700C7E6D5 /* ImageCollectionViewCell.swift */,
+				DACF5A7C2C1731E700C7E6D5 /* APIManager.swift */,
 				DAE04D742C17240200E7FB52 /* Info.plist */,
 			);
 			path = Withings;
@@ -258,9 +300,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACF5A802C17330200C7E6D5 /* ImagesResonse.swift in Sources */,
 				DAE04D6B2C1723F500E7FB52 /* ViewController.swift in Sources */,
+				DACF5A882C1753B500C7E6D5 /* ImagesCarouselViewController.swift in Sources */,
+				DACF5A8B2C17547800C7E6D5 /* ImagesCarouselViewLayout.swift in Sources */,
+				DACF5A7D2C1731E700C7E6D5 /* APIManager.swift in Sources */,
 				DAE04D672C1723F500E7FB52 /* AppDelegate.swift in Sources */,
+				DACF5A842C173E2700C7E6D5 /* ImageCollectionViewCell.swift in Sources */,
 				DAE04D692C1723F500E7FB52 /* SceneDelegate.swift in Sources */,
+				DACF5A822C17335200C7E6D5 /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
