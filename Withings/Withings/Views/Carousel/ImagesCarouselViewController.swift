@@ -75,7 +75,6 @@ extension ImagesCarouselViewController: UICollectionViewDataSource {
         imageView.contentMode = .center
         imageView.sizeToFit()
         imageView.image = selectedImages[indexPath.item].image
-//        imageView.sd_setImage(with: selectedImages[indexPath.item], placeholderImage: UIImage(named: "placeholder"))
         cell.contentView.addSubview(imageView)
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: cell.topAnchor),
