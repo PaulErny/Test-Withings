@@ -22,6 +22,8 @@ class ImagesCarouselViewController: UIViewController {
     }
     
     private func setupView() {
+        self.view.frame = .zero
+        collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.backgroundColor = .clear
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -57,7 +59,7 @@ class ImagesCarouselViewController: UIViewController {
         let index = selectedImages.count > index ? index : 0
         guard selectedIndex != index else { return }
         selectedIndex = index
-        collectionView.scrollToItem(at: IndexPath(item: selectedIndex, section: 0), at: .centeredHorizontally, animated: true)
+        collectionView.scrollToItem(at: IndexPath(item: selectedIndex, section: 0), at: .centeredVertically, animated: true)
     }
 }
 
@@ -71,6 +73,7 @@ extension ImagesCarouselViewController: UICollectionViewDataSource {
         let imageView: UIImageView = UIImageView(frame: .zero )
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .center
+        imageView.sizeToFit()
         imageView.image = selectedImages[indexPath.item].image
 //        imageView.sd_setImage(with: selectedImages[indexPath.item], placeholderImage: UIImage(named: "placeholder"))
         cell.contentView.addSubview(imageView)
