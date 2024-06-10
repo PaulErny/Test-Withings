@@ -11,7 +11,7 @@ import UIKit
 struct ImageModel: Decodable {
     let id : Int?
     let previewImage: UIImage?
-    let image: UIImage?
+    var image: UIImage?
     let pageURL : String?
     let type : String?
     let tags : String?

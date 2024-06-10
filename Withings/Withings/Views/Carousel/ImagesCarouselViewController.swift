@@ -19,10 +19,12 @@ class ImagesCarouselViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupTimer()
+        setupImageFilters()
     }
     
     private func setupView() {
         self.view.frame = .zero
+        self.view.backgroundColor = .white
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.backgroundColor = .clear
         collectionView.delegate = self
@@ -61,6 +63,13 @@ class ImagesCarouselViewController: UIViewController {
         selectedIndex = index
         collectionView.scrollToItem(at: IndexPath(item: selectedIndex, section: 0), at: .centeredVertically, animated: true)
     }
+    
+    private func setupImageFilters() {
+        for (index, imageData) in selectedImages.enumerated() {
+            let filteredImage = ImageFilterer.shared.applyRandomFilter(on: imageData.image, addingFilterName: true)
+            selectedImages[index].image = filteredImage
+        }
+    }
 }
 
 extension ImagesCarouselViewController: UICollectionViewDataSource {
@@ -75,7 +84,7 @@ extension ImagesCarouselViewController: UICollectionViewDataSource {
         imageView.contentMode = .center
         imageView.sizeToFit()
 //        imageView.image = ImageFilterer.shared.applyCrystallizeEffect(to: selectedImages[indexPath.item].image)
-        imageView.image = ImageFilterer.shared.applyRandomFilter(on: selectedImages[indexPath.item].image, addingFilterName: false)
+        imageView.image = selectedImages[indexPath.item].image
         cell.contentView.addSubview(imageView)
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: cell.topAnchor),
