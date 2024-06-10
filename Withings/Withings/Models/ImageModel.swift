@@ -8,12 +8,6 @@
 import Foundation
 import UIKit
 
-enum DataType: String {
-    case photo = "photo"
-    case video = "video"
-    case other
-}
-
 struct ImageModel: Decodable {
     let id : Int?
     let previewImage: UIImage?

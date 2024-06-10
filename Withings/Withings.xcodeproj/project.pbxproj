@@ -13,6 +13,7 @@
 		DACF5A842C173E2700C7E6D5 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A832C173E2700C7E6D5 /* ImageCollectionViewCell.swift */; };
 		DACF5A882C1753B500C7E6D5 /* ImagesCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A872C1753B500C7E6D5 /* ImagesCarouselViewController.swift */; };
 		DACF5A8B2C17547800C7E6D5 /* ImagesCarouselViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A8A2C17547700C7E6D5 /* ImagesCarouselViewLayout.swift */; };
+		DACF5A8D2C17607E00C7E6D5 /* ImageFilterer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A8C2C17607E00C7E6D5 /* ImageFilterer.swift */; };
 		DAE04D672C1723F500E7FB52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D662C1723F500E7FB52 /* AppDelegate.swift */; };
 		DAE04D692C1723F500E7FB52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D682C1723F500E7FB52 /* SceneDelegate.swift */; };
 		DAE04D6B2C1723F500E7FB52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D6A2C1723F500E7FB52 /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 		DACF5A832C173E2700C7E6D5 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		DACF5A872C1753B500C7E6D5 /* ImagesCarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCarouselViewController.swift; sourceTree = "<group>"; };
 		DACF5A8A2C17547700C7E6D5 /* ImagesCarouselViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCarouselViewLayout.swift; sourceTree = "<group>"; };
+		DACF5A8C2C17607E00C7E6D5 /* ImageFilterer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterer.swift; sourceTree = "<group>"; };
 		DAE04D632C1723F500E7FB52 /* Withings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Withings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE04D662C1723F500E7FB52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE04D682C1723F500E7FB52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				DACF5A872C1753B500C7E6D5 /* ImagesCarouselViewController.swift */,
+				DACF5A8C2C17607E00C7E6D5 /* ImageFilterer.swift */,
 				DACF5A8A2C17547700C7E6D5 /* ImagesCarouselViewLayout.swift */,
 			);
 			path = Carousel;
@@ -304,6 +307,7 @@
 				DAE04D6B2C1723F500E7FB52 /* ViewController.swift in Sources */,
 				DACF5A882C1753B500C7E6D5 /* ImagesCarouselViewController.swift in Sources */,
 				DACF5A8B2C17547800C7E6D5 /* ImagesCarouselViewLayout.swift in Sources */,
+				DACF5A8D2C17607E00C7E6D5 /* ImageFilterer.swift in Sources */,
 				DACF5A7D2C1731E700C7E6D5 /* APIManager.swift in Sources */,
 				DAE04D672C1723F500E7FB52 /* AppDelegate.swift in Sources */,
 				DACF5A842C173E2700C7E6D5 /* ImageCollectionViewCell.swift in Sources */,
