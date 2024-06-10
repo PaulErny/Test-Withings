@@ -88,6 +88,11 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCollectionViewCell
         cell.setImage(with: images[indexPath.item].previewImage)
+        if selectedImages.contains(where: { $0.id == images[indexPath.item].id }) {
+            cell.checkmark.isHidden = false
+        } else {
+            cell.checkmark.isHidden = true
+        }
         return cell
     }
     
