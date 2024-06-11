@@ -18,6 +18,9 @@ class ViewController: UIViewController {
             rightBarButton.isEnabled = selectedImages.count > 1
         }
     }
+    var pageNumber: Int = 0
+    var searchBarText: String = ""
+    var isQuerying = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,23 +62,33 @@ class ViewController: UIViewController {
         carousel.selectedImages = selectedImages
         navigationController?.pushViewController(carousel, animated: true)
     }
-}
-
-extension ViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchText = searchBar.text else { return }
-        APIManager.shared.fetchImages(search: searchText, completion: { [weak self] response in
+    
+    private func queryImages() {
+        guard !isQuerying else { return } // avoid queueing queries for the same data
+        isQuerying = true
+        APIManager.shared.fetchImages(search: searchBarText, page: pageNumber + 1, completion: { [weak self] response in
             guard let _self = self else { return }
             switch response {
             case .failure(let error):
                 print(error) // !
+                _self.isQuerying = false
             case .success(let data):
-                _self.images = data.hits
+                _self.images.append(contentsOf: data.hits)
+                _self.pageNumber += 1
                 DispatchQueue.main.async {
                     _self.collectionView.reloadData()
+                    _self.isQuerying = false
                 }
             }
         })
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchBarText = searchBar.text else { return }
+        self.searchBarText = searchBarText
+        queryImages()
         searchBar.resignFirstResponder()
     }
 }
@@ -98,6 +111,13 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
             cell.checkmark.isHidden = true
         }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        // request next page if needed
+        if !images.isEmpty && indexPath.item == images.count - 1 {
+            queryImages()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

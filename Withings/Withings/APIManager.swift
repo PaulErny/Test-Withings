@@ -16,7 +16,7 @@ enum DataError: Error {
 
 class APIManager {
     static let shared = APIManager()
-    var components = URLComponents(string: "https://pixabay.com/api/")!
+    private var components = URLComponents(string: "https://pixabay.com/api/")!
     
     private init() {
         components.queryItems = [

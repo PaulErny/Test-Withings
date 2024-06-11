@@ -66,6 +66,7 @@ class ImagesCarouselViewController: UIViewController {
         self.view.backgroundColor = .white
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.backgroundColor = .clear
+        collectionView.contentMode = .scaleAspectFill
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isUserInteractionEnabled = false
