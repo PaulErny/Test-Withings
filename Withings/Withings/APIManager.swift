@@ -19,14 +19,15 @@ class APIManager {
     var components = URLComponents(string: "https://pixabay.com/api/")!
     
     private init() {
-        // TODO: stockers la clé api ailleur (info.plist / keychain ?)
         components.queryItems = [
-            URLQueryItem(name: "key", value: "18021445-326cf5bcd3658777a9d22df6f")
+            URLQueryItem(name: "key", value: ProcessInfo.processInfo.environment["API_KEY"])
         ]
     }
     
-    func fetchImages(search: String, completion: @escaping (Result<ImagesResonse, Error>) -> Void) {
+    func fetchImages(search: String, page: Int = 1, completion: @escaping (Result<ImagesResonse, Error>) -> Void) {
         components.queryItems?.append( URLQueryItem(name: "q", value: search) )
+        components.queryItems?.append( URLQueryItem(name: "page", value: "\(page)") )
+        components.queryItems?.append( URLQueryItem(name: "per_page", value: "\(36)") )
         components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
 
         guard let url = components.url else {
