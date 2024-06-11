@@ -83,7 +83,6 @@ extension ImagesCarouselViewController: UICollectionViewDataSource {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .center
         imageView.sizeToFit()
-//        imageView.image = ImageFilterer.shared.applyCrystallizeEffect(to: selectedImages[indexPath.item].image)
         imageView.image = selectedImages[indexPath.item].image
         cell.contentView.addSubview(imageView)
         NSLayoutConstraint.activate([

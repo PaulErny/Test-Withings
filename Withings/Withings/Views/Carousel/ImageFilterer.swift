@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import CoreImage
 import CoreImage.CIFilterBuiltins
+import CoreGraphics
 
 class ImageFilterer {
     static let shared = ImageFilterer()
@@ -83,27 +84,46 @@ class ImageFilterer {
         return image
     }
     
-    private func drawTextOnImage(text: String, image: UIImage?) -> UIImage? {
-        guard let image = image else { return image }
-        
-        UIGraphicsBeginImageContextWithOptions(image.size, false, UIScreen.main.scale)
-        
-        let textFontAttributes = [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: UIFont.labelFontSize),
-            NSAttributedString.Key.foregroundColor: UIColor.red,
-                ] as [NSAttributedString.Key : Any]
-        image.draw(in: CGRect(origin: CGPoint.zero, size: image.size) )
-        
-        let rect = CGRect(
-            origin: CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2),
-            size: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        )
-        text.draw(in: rect, withAttributes: textFontAttributes)
+    private func getAverageImageColor(from image: UIImage) -> UIColor? {
+        guard let inputImage = CIImage(image: image) else { return nil }
+        let filter = CIFilter.areaAverage()
+        filter.inputImage = inputImage
+        filter.extent = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+        guard let outputImage = filter.outputImage else { return nil }
 
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+        var bitmap = [UInt8](repeating: 0, count: 4)
+        let context = CIContext(options: [.workingColorSpace: kCFNull])
+        context.render(outputImage, toBitmap: &bitmap, rowBytes: 4, bounds: CGRect(x: 0, y: 0, width: 1, height: 1), format: .RGBA8, colorSpace: nil)
 
-        return newImage!
+        return UIColor(red: CGFloat(bitmap[0]) / 255, green: CGFloat(bitmap[1]) / 255, blue: CGFloat(bitmap[2]) / 255, alpha: CGFloat(bitmap[3]) / 255)
+    }
+    
+    private func generateTextOnImage(text: String, baseImage: UIImage?) -> UIImage? {
+        guard let baseImage = baseImage else { return baseImage }
+        let averageImageColor = getAverageImageColor(from: baseImage) ?? UIColor.lightGray
+        let renderer = UIGraphicsImageRenderer(size: baseImage.size)
+        let image = renderer.image { context in
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .center
+
+            let attributes = [
+                NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 64),
+                NSAttributedString.Key.foregroundColor: averageImageColor
+            ]
+
+            let myText = text.capitalized
+            let attributedString = NSAttributedString(string: myText, attributes: attributes)
+
+            let imageBounds = CGRect(x: 0,
+                                    y: 0,
+                                    width: baseImage.size.width,
+                                    height: baseImage.size.height)
+            baseImage.draw(in: imageBounds, blendMode: .normal, alpha: 1)
+            attributedString.draw(at: CGPoint(x: imageBounds.width / 2 - attributedString.size().width / 2,
+                                              y: imageBounds.height / 1.15))
+        }
+        return image
     }
     
     func applyRandomFilter(on image: UIImage?, addingFilterName: Bool = false) -> UIImage? {
@@ -112,7 +132,7 @@ class ImageFilterer {
         let chosenFilter = filters.keys[dictIndex]
         let filteredImage = filters[chosenFilter]!(image)
         if addingFilterName {
-            return drawTextOnImage(text: chosenFilter.rawValue, image: filteredImage)
+            return generateTextOnImage(text: chosenFilter.rawValue, baseImage: filteredImage)
         }
         return filteredImage
     }
