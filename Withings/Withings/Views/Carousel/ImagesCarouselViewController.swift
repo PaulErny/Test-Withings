@@ -12,14 +12,53 @@ class ImagesCarouselViewController: UIViewController {
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: CarouselLayout())
     
     var selectedImages: [ImageModel] = []
+    var loadedImages = 0 {
+        didSet {
+            if loadedImages == selectedImages.count {
+                dismissAlerView()
+            }
+        }
+    }
     private var timer: Timer?
     var selectedIndex: Int = 0
     
+    let alert = UIAlertController(title: nil, message: "Un instant...", preferredStyle: .alert)
+    var isPresentingAlert = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        presentAlertView()
         setupView()
         setupTimer()
         setupImageFilters()
+        setupAlertView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    private func presentAlertView() {
+        if !isPresentingAlert && loadedImages < selectedImages.count {
+            present(alert, animated: true)
+            isPresentingAlert = true
+        }
+    }
+    
+    private func dismissAlerView() {
+        if isPresentingAlert {
+            alert.dismiss(animated: true)
+            isPresentingAlert = false
+        }
+    }
+    
+    private func setupAlertView() {
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.medium
+        loadingIndicator.startAnimating();
+
+        alert.view.addSubview(loadingIndicator)
     }
     
     private func setupView() {
@@ -71,6 +110,7 @@ class ImagesCarouselViewController: UIViewController {
                 let filteredImage = ImageFilterer.shared.applyRandomFilter(on: image, addingFilterName: true)
                 _self.selectedImages[index].image = filteredImage
                 DispatchQueue.main.async {
+                    _self.loadedImages += 1
                     _self.collectionView.reloadData()
                 }
             })
