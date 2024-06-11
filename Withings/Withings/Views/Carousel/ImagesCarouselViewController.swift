@@ -27,15 +27,15 @@ class ImagesCarouselViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presentAlertView()
+        setupAlertView()
         setupView()
         setupTimer()
         setupImageFilters()
-        setupAlertView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        presentAlertView()
     }
     
     private func presentAlertView() {
