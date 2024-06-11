@@ -66,8 +66,14 @@ class ImagesCarouselViewController: UIViewController {
     
     private func setupImageFilters() {
         for (index, imageData) in selectedImages.enumerated() {
-            let filteredImage = ImageFilterer.shared.applyRandomFilter(on: imageData.image, addingFilterName: true)
-            selectedImages[index].image = filteredImage
+            imageData.createLargeImage(completion: { [weak self] image in
+                guard let _self = self else { return }
+                let filteredImage = ImageFilterer.shared.applyRandomFilter(on: image, addingFilterName: true)
+                _self.selectedImages[index].image = filteredImage
+                DispatchQueue.main.async {
+                    _self.collectionView.reloadData()
+                }
+            })
         }
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 struct ImageModel: Decodable {
     let id : Int?
-    let previewImage: UIImage?
+//    var previewImage: UIImage?
     var image: UIImage?
     let pageURL : String?
     let type : String?
@@ -60,7 +60,6 @@ struct ImageModel: Decodable {
         case userImageURL = "userImageURL"
     }
 
-    /// do not call on main thread bcs UIImages are created here
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(Int.self, forKey: .id)
@@ -88,11 +87,29 @@ struct ImageModel: Decodable {
         user = try values.decodeIfPresent(String.self, forKey: .user)
         userImageURL = try values.decodeIfPresent(String.self, forKey: .userImageURL)
         
-        // --- ok for now since its only called in background threads by APIManager ---
-
-        let previewData = NSData(contentsOf: previewURL!)
-        previewImage = UIImage(data: previewData! as Data)
-        let imageData = NSData(contentsOf: largeImageURL!)
-        image = UIImage(data: imageData! as Data)
+        image = nil
     }
+
+    func createPreviewImage(completion: @escaping (UIImage?) -> Void) {
+        DispatchQueue.global(qos: .background).async {
+            let previewData = NSData(contentsOf: previewURL!)
+            let image = UIImage(data: previewData! as Data)
+            completion(image)
+        }
+    }
+    
+    func createLargeImage(completion: @escaping (UIImage?) -> Void) {
+        DispatchQueue.global(qos: .background).async {
+            let previewData = NSData(contentsOf: largeImageURL!)
+            let image = UIImage(data: previewData! as Data)
+            completion(image)
+        }
+    }
+//    func createLargeImage() {
+//        DispatchQueue.global(qos: .background).async { [weak self]
+//            guard let _self = self else { return }
+//            let imageData = NSData(contentsOf: _self.largeImageURL!)
+//            _self.image = UIImage(data: imageData! as Data)
+//        }
+//    }
 }
