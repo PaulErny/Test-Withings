@@ -10,29 +10,40 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var rightBarButton: UIBarButtonItem!
     
     var images: [ImageModel] = []
     var selectedImages: [ImageModel] = [] {
         didSet {
-            rightBarButton.isEnabled = selectedImages.count > 1
+            rightNavBarButton.isEnabled = selectedImages.count > 1
         }
     }
     var pageNumber: Int = 0
     var searchBarText: String = ""
     var isQuerying = false
+    let rightNavBarButton = UIBarButtonItem()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchBar.delegate = self
-        rightBarButton.isEnabled = false
+        setupNavBar()
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
         setupCollectionView()
+    }
+    
+    private func setupNavBar() {
+        rightNavBarButton.title = "OK"
+        rightNavBarButton.isEnabled = false
+        rightNavBarButton.style = .plain
+        rightNavBarButton.action = #selector(onImagesSelected)
+        rightNavBarButton.target = self
+        
+        navigationItem.rightBarButtonItem = rightNavBarButton
+        navigationItem.title = "Test Withings"
     }
     
     private func setupCollectionView() {
@@ -56,8 +67,7 @@ class ViewController: UIViewController {
         collectionView.delegate = self
     }
     
-    
-    @IBAction func onImagesSelected(_ sender: Any) {
+    @objc func onImagesSelected() {
         let carousel = ImagesCarouselViewController()
         carousel.selectedImages = selectedImages
         navigationController?.pushViewController(carousel, animated: true)

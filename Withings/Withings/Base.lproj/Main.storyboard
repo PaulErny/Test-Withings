@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0S4-3i-Vgf">
-                                <rect key="frame" x="16" y="191" width="361" height="578"/>
+                                <rect key="frame" x="16" y="147" width="361" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UNP-qR-6Zo">
                                     <size key="itemSize" width="128" height="128"/>
@@ -62,22 +62,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2l5-hM-LcK">
-                                <rect key="frame" x="0.0" y="103" width="393" height="44"/>
-                                <items>
-                                    <navigationItem title="Withings Test" id="LdL-d1-fgF">
-                                        <barButtonItem key="rightBarButtonItem" title="OK" id="SYv-Io-ojG">
-                                            <connections>
-                                                <action selector="onImagesSelected:" destination="BYZ-38-t0r" id="kdT-aR-cVS"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dsF-5X-s5f">
-                                <rect key="frame" x="0.0" y="147" width="393" height="44"/>
+                                <rect key="frame" x="16" y="103" width="361" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="2uN-uc-1Vc"/>
+                                    <constraint firstAttribute="height" constant="44" id="plo-tm-bed"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -88,16 +76,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0S4-3i-Vgf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7zY-dC-Rem"/>
-                            <constraint firstItem="dsF-5X-s5f" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8sw-PQ-Kln"/>
-                            <constraint firstItem="2l5-hM-LcK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="C4Q-Ws-nUt"/>
-                            <constraint firstItem="0S4-3i-Vgf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MbB-Cc-PWq"/>
-                            <constraint firstItem="dsF-5X-s5f" firstAttribute="top" secondItem="2l5-hM-LcK" secondAttribute="bottom" id="ToH-ue-pSu"/>
-                            <constraint firstItem="0S4-3i-Vgf" firstAttribute="top" secondItem="dsF-5X-s5f" secondAttribute="bottom" id="XEu-19-0gm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0S4-3i-Vgf" secondAttribute="trailing" constant="16" id="d2H-Qr-954"/>
-                            <constraint firstItem="dsF-5X-s5f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fMO-vz-rGo"/>
-                            <constraint firstItem="2l5-hM-LcK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mz7-vb-D7x"/>
-                            <constraint firstItem="2l5-hM-LcK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vSg-33-icK"/>
+                            <constraint firstItem="dsF-5X-s5f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3s8-AG-LcF"/>
+                            <constraint firstItem="dsF-5X-s5f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OFI-DJ-7Tu"/>
+                            <constraint firstItem="0S4-3i-Vgf" firstAttribute="top" secondItem="dsF-5X-s5f" secondAttribute="bottom" id="Ruf-UZ-JJn"/>
+                            <constraint firstItem="0S4-3i-Vgf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="SpA-Kz-RRg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dsF-5X-s5f" secondAttribute="trailing" constant="16" id="bel-XE-8ph"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0S4-3i-Vgf" secondAttribute="trailing" constant="16" id="fMB-8f-AyC"/>
+                            <constraint firstItem="0S4-3i-Vgf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kjq-vg-2hy"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -105,7 +90,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="0S4-3i-Vgf" id="yQw-yy-R6u"/>
-                        <outlet property="rightBarButton" destination="SYv-Io-ojG" id="AVq-sw-4Ws"/>
                         <outlet property="searchBar" destination="dsF-5X-s5f" id="ZFV-Ng-fxe"/>
                     </connections>
                 </viewController>
