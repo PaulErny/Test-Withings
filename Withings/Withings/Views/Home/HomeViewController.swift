@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Withings
 //
 //  Created by Paul Erny on 10/06/2024.
@@ -7,11 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var pixabayLogo: UIImageView!
-
+    @IBOutlet weak var searchBar: UISearchBar!
     var images: [ImageModel] = []
     var selectedImages: [ImageModel] = [] {
         didSet {
@@ -103,7 +102,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UISearchBarDelegate {
+extension HomeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchBarText = searchBar.text else { return }
         self.searchBarText = searchBarText
@@ -112,7 +111,7 @@ extension ViewController: UISearchBarDelegate {
     }
 }
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         images.count
     }

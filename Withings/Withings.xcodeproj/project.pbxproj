@@ -20,7 +20,7 @@
 		DACF5A8D2C17607E00C7E6D5 /* ImageFilterer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A8C2C17607E00C7E6D5 /* ImageFilterer.swift */; };
 		DAE04D672C1723F500E7FB52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D662C1723F500E7FB52 /* AppDelegate.swift */; };
 		DAE04D692C1723F500E7FB52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D682C1723F500E7FB52 /* SceneDelegate.swift */; };
-		DAE04D6B2C1723F500E7FB52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D6A2C1723F500E7FB52 /* ViewController.swift */; };
+		DAE04D6B2C1723F500E7FB52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D6A2C1723F500E7FB52 /* HomeViewController.swift */; };
 		DAE04D6E2C1723F600E7FB52 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DAE04D6D2C1723F600E7FB52 /* Base */; };
 		DAE04D702C17240200E7FB52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE04D6F2C17240200E7FB52 /* Assets.xcassets */; };
 		DAE04D732C17240200E7FB52 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DAE04D722C17240200E7FB52 /* Base */; };
@@ -53,11 +53,11 @@
 		DACF5A832C173E2700C7E6D5 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		DACF5A872C1753B500C7E6D5 /* ImagesCarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCarouselViewController.swift; sourceTree = "<group>"; };
 		DACF5A8A2C17547700C7E6D5 /* ImagesCarouselViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCarouselViewLayout.swift; sourceTree = "<group>"; };
-		DACF5A8C2C17607E00C7E6D5 /* ImageFilterer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterer.swift; sourceTree = "<group>"; };
+		DACF5A8C2C17607E00C7E6D5 /* ImageFilterer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageFilterer.swift; path = Views/Carousel/ImageFilterer.swift; sourceTree = "<group>"; };
 		DAE04D632C1723F500E7FB52 /* Withings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Withings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE04D662C1723F500E7FB52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE04D682C1723F500E7FB52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DAE04D6A2C1723F500E7FB52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAE04D6A2C1723F500E7FB52 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DAE04D6D2C1723F600E7FB52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAE04D6F2C17240200E7FB52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAE04D722C17240200E7FB52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,10 +93,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA6943192C19F28800936CAE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DAE04D6A2C1723F500E7FB52 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		DACF5A792C172A4D00C7E6D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DAE04D6A2C1723F500E7FB52 /* ViewController.swift */,
+				DA6943192C19F28800936CAE /* Home */,
 				DACF5A892C17546400C7E6D5 /* Carousel */,
 			);
 			path = Views;
@@ -115,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				DACF5A872C1753B500C7E6D5 /* ImagesCarouselViewController.swift */,
-				DACF5A8C2C17607E00C7E6D5 /* ImageFilterer.swift */,
 				DACF5A8A2C17547700C7E6D5 /* ImagesCarouselViewLayout.swift */,
 			);
 			path = Carousel;
@@ -152,6 +159,7 @@
 				DACF5A792C172A4D00C7E6D5 /* Views */,
 				DAE04D712C17240200E7FB52 /* LaunchScreen.storyboard */,
 				DACF5A832C173E2700C7E6D5 /* ImageCollectionViewCell.swift */,
+				DACF5A8C2C17607E00C7E6D5 /* ImageFilterer.swift */,
 				DACF5A7C2C1731E700C7E6D5 /* APIManager.swift */,
 				DAE04D742C17240200E7FB52 /* Info.plist */,
 			);
@@ -307,7 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DACF5A802C17330200C7E6D5 /* ImagesResonse.swift in Sources */,
-				DAE04D6B2C1723F500E7FB52 /* ViewController.swift in Sources */,
+				DAE04D6B2C1723F500E7FB52 /* HomeViewController.swift in Sources */,
 				DACF5A882C1753B500C7E6D5 /* ImagesCarouselViewController.swift in Sources */,
 				DACF5A8B2C17547800C7E6D5 /* ImagesCarouselViewLayout.swift in Sources */,
 				DACF5A8D2C17607E00C7E6D5 /* ImageFilterer.swift in Sources */,

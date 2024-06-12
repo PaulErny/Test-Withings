@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Withings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Withings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,9 +118,9 @@
                     <navigationItem key="navigationItem" id="8Z6-Rh-eMG"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="collectionView" destination="0S4-3i-Vgf" id="yQw-yy-R6u"/>
-                        <outlet property="pixabayLogo" destination="Tol-lc-wco" id="OoI-vp-7Gp"/>
-                        <outlet property="searchBar" destination="dsF-5X-s5f" id="ZFV-Ng-fxe"/>
+                        <outlet property="collectionView" destination="0S4-3i-Vgf" id="sf6-u1-qyw"/>
+                        <outlet property="pixabayLogo" destination="Tol-lc-wco" id="50a-hs-Fh0"/>
+                        <outlet property="searchBar" destination="dsF-5X-s5f" id="FPb-kp-YkK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
