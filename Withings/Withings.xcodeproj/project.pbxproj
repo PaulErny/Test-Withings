@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0AF2E92C199589003F094D /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0AF2E82C199589003F094D /* APIManagerTests.swift */; };
+		DA0AF2EA2C199596003F094D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A7C2C1731E700C7E6D5 /* APIManager.swift */; };
+		DA0AF2EB2C19A5DD003F094D /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A812C17335200C7E6D5 /* ImageModel.swift */; };
+		DA0AF2EC2C19A5E1003F094D /* ImagesResonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A7F2C17330200C7E6D5 /* ImagesResonse.swift */; };
 		DACF5A7D2C1731E700C7E6D5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A7C2C1731E700C7E6D5 /* APIManager.swift */; };
 		DACF5A802C17330200C7E6D5 /* ImagesResonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A7F2C17330200C7E6D5 /* ImagesResonse.swift */; };
 		DACF5A822C17335200C7E6D5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A812C17335200C7E6D5 /* ImageModel.swift */; };
@@ -20,7 +24,6 @@
 		DAE04D6E2C1723F600E7FB52 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DAE04D6D2C1723F600E7FB52 /* Base */; };
 		DAE04D702C17240200E7FB52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE04D6F2C17240200E7FB52 /* Assets.xcassets */; };
 		DAE04D732C17240200E7FB52 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DAE04D722C17240200E7FB52 /* Base */; };
-		DAE04D7E2C17240700E7FB52 /* WithingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D7D2C17240700E7FB52 /* WithingsTests.swift */; };
 		DAE04D882C17240700E7FB52 /* WithingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D872C17240700E7FB52 /* WithingsUITests.swift */; };
 		DAE04D8A2C17240700E7FB52 /* WithingsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE04D892C17240700E7FB52 /* WithingsUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA0AF2E82C199589003F094D /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
 		DACF5A7C2C1731E700C7E6D5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		DACF5A7F2C17330200C7E6D5 /* ImagesResonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesResonse.swift; sourceTree = "<group>"; };
 		DACF5A812C17335200C7E6D5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
@@ -59,7 +63,6 @@
 		DAE04D722C17240200E7FB52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAE04D742C17240200E7FB52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAE04D792C17240600E7FB52 /* WithingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WithingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAE04D7D2C17240700E7FB52 /* WithingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithingsTests.swift; sourceTree = "<group>"; };
 		DAE04D832C17240700E7FB52 /* WithingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WithingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE04D872C17240700E7FB52 /* WithingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithingsUITests.swift; sourceTree = "<group>"; };
 		DAE04D892C17240700E7FB52 /* WithingsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithingsUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -158,7 +161,7 @@
 		DAE04D7C2C17240700E7FB52 /* WithingsTests */ = {
 			isa = PBXGroup;
 			children = (
-				DAE04D7D2C17240700E7FB52 /* WithingsTests.swift */,
+				DA0AF2E82C199589003F094D /* APIManagerTests.swift */,
 			);
 			path = WithingsTests;
 			sourceTree = "<group>";
@@ -320,7 +323,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE04D7E2C17240700E7FB52 /* WithingsTests.swift in Sources */,
+				DA0AF2EA2C199596003F094D /* APIManager.swift in Sources */,
+				DA0AF2E92C199589003F094D /* APIManagerTests.swift in Sources */,
+				DA0AF2EB2C19A5DD003F094D /* ImageModel.swift in Sources */,
+				DA0AF2EC2C19A5E1003F094D /* ImagesResonse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

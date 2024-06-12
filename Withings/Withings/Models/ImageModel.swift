@@ -8,31 +8,31 @@
 import Foundation
 import UIKit
 
-struct ImageModel: Decodable {
-    let id : Int?
+struct ImageModel: Decodable, Equatable {
+    var id : Int?
 //    var previewImage: UIImage?
     var image: UIImage?
-    let pageURL : String?
-    let type : String?
-    let tags : String?
-    let previewURL : URL?
-    let previewWidth : Int?
-    let previewHeight : Int?
-    let webformatURL : String?
-    let webformatWidth : Int?
-    let webformatHeight : Int?
-    let largeImageURL : URL?
-    let imageWidth : Int?
-    let imageHeight : Int?
-    let imageSize : Int?
-    let views : Int?
-    let downloads : Int?
-    let collections : Int?
-    let likes : Int?
-    let comments : Int?
-    let user_id : Int?
-    let user : String?
-    let userImageURL : String?
+    var pageURL : String?
+    var type : String?
+    var tags : String?
+    var previewURL : URL?
+    var previewWidth : Int?
+    var previewHeight : Int?
+    var webformatURL : URL?
+    var webformatWidth : Int?
+    var webformatHeight : Int?
+    var largeImageURL : URL?
+    var imageWidth : Int?
+    var imageHeight : Int?
+    var imageSize : Int?
+    var views : Int?
+    var downloads : Int?
+    var collections : Int?
+    var likes : Int?
+    var comments : Int?
+    var user_id : Int?
+    var user : String?
+    var userImageURL : URL?
 
     enum CodingKeys: String, CodingKey {
 
@@ -70,7 +70,8 @@ struct ImageModel: Decodable {
         previewURL = URL(string: _previewURL)
         previewWidth = try values.decodeIfPresent(Int.self, forKey: .previewWidth)
         previewHeight = try values.decodeIfPresent(Int.self, forKey: .previewHeight)
-        webformatURL = try values.decodeIfPresent(String.self, forKey: .webformatURL)
+        let _webformatURL = try values.decode(String.self, forKey: .webformatURL)
+        webformatURL = URL(string: _webformatURL)
         webformatWidth = try values.decodeIfPresent(Int.self, forKey: .webformatWidth)
         webformatHeight = try values.decodeIfPresent(Int.self, forKey: .webformatHeight)
         let _largeImageURL = try values.decode(String.self, forKey: .largeImageURL)
@@ -85,7 +86,8 @@ struct ImageModel: Decodable {
         comments = try values.decodeIfPresent(Int.self, forKey: .comments)
         user_id = try values.decodeIfPresent(Int.self, forKey: .user_id)
         user = try values.decodeIfPresent(String.self, forKey: .user)
-        userImageURL = try values.decodeIfPresent(String.self, forKey: .userImageURL)
+        let _userImageURL = try values.decode(String.self, forKey: .userImageURL)
+        userImageURL = URL(string: _userImageURL)
         
         image = nil
     }
@@ -105,11 +107,35 @@ struct ImageModel: Decodable {
             completion(image)
         }
     }
-//    func createLargeImage() {
-//        DispatchQueue.global(qos: .background).async { [weak self]
-//            guard let _self = self else { return }
-//            let imageData = NSData(contentsOf: _self.largeImageURL!)
-//            _self.image = UIImage(data: imageData! as Data)
-//        }
-//    }
+}
+
+extension ImageModel {
+    private init() {}
+    
+    static var debugSample: ImageModel { // first query hit for q = "cat"
+        var sample = ImageModel()
+        sample.id = 8618301
+        sample.pageURL = "https://pixabay.com/photos/simba-cat-portrait-cat-photography-8618301/"
+        sample.type = "photo"
+        sample.tags = "simba, pet, cat"
+        sample.previewURL = URL(string: "https://cdn.pixabay.com/photo/2024/03/07/10/38/simba-8618301_150.jpg")
+        sample.previewWidth = 150
+        sample.previewHeight = 100
+        sample.webformatURL = URL( string: "https://pixabay.com/get/gcd652f1b6e394aa101e1501a6d2459b7420103c22bce5b65b753a37ccc08d5a72d0ae186e237feb3975023c93614e65bc0a9cdb8ce13065154e7b685cef405a1_640.jpg")
+        sample.webformatWidth = 640
+        sample.webformatHeight = 426
+        sample.largeImageURL = URL( string: "https://pixabay.com/get/gc3bccec25e857ae9a569a2fe9b2005dbdd7c41f0bbe6df788f9a4ea5221fac8b46957a02e9fcd50e22acb4ee2499f474de95f7a773945aff1e3f2f5c29ef18a0_1280.jpg")
+        sample.imageWidth = 6016
+        sample.imageHeight = 4000
+        sample.imageSize = 6194350
+        sample.views = 28632
+        sample.downloads = 23587
+        sample.collections = 80
+        sample.likes = 130
+        sample.comments = 18
+        sample.user_id = 5211440
+        sample.user = "Jill-Schafer-Creative-Lab"
+        sample.userImageURL = URL(string: "https://cdn.pixabay.com/user/2022/09/07/09-11-48-369_250x250.png")
+        return sample
+    }
 }

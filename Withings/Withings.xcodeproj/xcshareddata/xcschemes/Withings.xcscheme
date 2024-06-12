@@ -80,6 +80,11 @@
             value = "18021445-326cf5bcd3658777a9d22df6f"
             isEnabled = "YES">
          </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "ITEMS_PER_PAGE"
+            value = "36"
+            isEnabled = "YES">
+         </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
