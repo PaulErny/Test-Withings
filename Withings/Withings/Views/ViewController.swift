@@ -10,7 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
+    @IBOutlet weak var pixabayLogo: UIImageView!
+
     var images: [ImageModel] = []
     var selectedImages: [ImageModel] = [] {
         didSet {
@@ -26,13 +27,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         searchBar.delegate = self
+        searchBar.searchBarStyle = .minimal
         setupNavBar()
+        setupPixabayLogo()
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
         setupCollectionView()
+    }
+    
+    private func setupPixabayLogo() {
+        pixabayLogo.image = UIImage(named: "Pixabay")
+        pixabayLogo.clipsToBounds = true
+        pixabayLogo.layer.cornerRadius = pixabayLogo.bounds.width / 2
     }
     
     private func setupNavBar() {
